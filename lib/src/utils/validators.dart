@@ -234,3 +234,8 @@ bool isDate(String str) {
     return false;
   }
 }
+
+/// check if the string is a valid phone number
+bool isPhoneNumber(String str) {
+  
+}

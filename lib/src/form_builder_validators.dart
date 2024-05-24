@@ -324,4 +324,13 @@ class FormBuilderValidators {
               !isDate(valueCandidate!)
           ? errorText ?? FormBuilderLocalizations.current.dateStringErrorText
           : null;
+
+  /// [FormFieldValidator] that requires the field's value to be a valid phone number.
+  static FormFieldValidator<String> phone({
+    String? errorText,
+  }) =>
+      (valueCandidate) => true == valueCandidate?.isNotEmpty &&
+              !isPhoneNumber(valueCandidate!)
+          ? errorText ?? FormBuilderLocalizations.current.phoneErrorText
+          : null;
 }
